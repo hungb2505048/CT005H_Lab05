@@ -3,26 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infographic và Video YouTube</title>
+    <title>Giới Thiệu Cá Nhân & Sản Phẩm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 5px;
+        }
+        
+        .intro-section {
+            padding: 40px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .intro-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .intro-section p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        
+        .products-section {
+            padding: 40px;
+        }
+        
+        .products-section h2 {
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 1.8em;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        
+        .product-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-header h3 {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        
+        .product-type {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .product-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 300px;
+        }
+        
+        .product-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-content img:hover {
+            transform: scale(1.05);
+        }
+        
+        .product-description {
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .product-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .product-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .pdf-icon, .image-icon, .video-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+    </style>
 </head>
 <body>
-    <div class="video" style="text-align:center;">
-    <a href="https://youtu.be/BDFtkjDQ7Hc" target="_blank">
-        <img 
-            src="Lab05_Ex2.1.png"
-            alt="Thumbnail video minh họa công nghệ số trong học tập"
-            style="
-                width:360px;
-                max-width:100%;
-                border-radius:12px;
-                box-shadow:0 4px 12px rgba(0,0,0,0.3);
-                cursor:pointer;
-            "
-        >
-    </a>
-    <p style="margin-top:8px;">
-        ▶ Nhấn vào ảnh để xem video trên YouTube
-    </p>
-</div>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>👋 Chào Mừng</h1>
+            <p>Giới Thiệu Cá Nhân & Sản Phẩm Đã Tạo</p>
+        </header>
+        
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <h2>🎯 Giới Thiệu</h2>
+            <p>
+                Xin chào! Tôi là một sinh viên năng động, đam mê công nghệ và phát triển web. 
+                Trang này giới thiệu về bản thân cùng với những sản phẩm đã tạo ra trong quá trình 
+                học tập và phát triển kỹ năng.
+            </p>
+            <p>
+                Tôi tập trung vào lĩnh vực HTML, CSS, JavaScript và các công nghệ web hiện đại. 
+                Dưới đây là ba sản phẩm tiêu biểu mà tôi đã hoàn thành.
+            </p>
+        </section>
+        
+        <!-- Products Section -->
+        <section class="products-section">
+            <h2>📦 Sản Phẩm Đã Tạo</h2>
+            
+            <div class="products-grid">
+                <!-- Product 1: PDF -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="pdf-icon">📄</div>
+                        <h3>Tài Liệu PDF</h3>
+                        <p class="product-type">Định dạng: PDF</p>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-description">
+                            <p><strong>Tên tệp:</strong> Lab05_Ex1.2.pdf</p>
+                            <p>Tài liệu bao gồm các nội dung chi tiết về dự án, kế hoạch học tập 
+                            và các tài liệu tham khảo quan trọng.</p>
+                        </div>
+                        <a href="Lab05_Ex1.2.pdf" target="_blank" class="product-btn">
+                            📥 Tải Xuống / Xem PDF
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 2: PNG Image -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="image-icon">🖼️</div>
+                        <h3>Infographic PNG</h3>
+                        <p class="product-type">Định dạng: PNG</p>
+                    </div>
+                    <div class="product-content">
+                        <img 
+                            src="Lab05_Ex2.1.png"
+                            alt="Infographic về công nghệ số trong học tập"
+                        >
+                        <div class="product-description">
+                            <p><strong>Tên tệp:</strong> Lab05_Ex2.1.png</p>
+                            <p>Infographic được thiết kế để minh họa vai trò của công nghệ số 
+                            trong hoạt động học tập hiện đại.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3: YouTube Video -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="video-icon">🎥</div>
+                        <h3>Video YouTube</h3>
+                        <p class="product-type">Định dạng: Video</p>
+                    </div>
+                    <div class="product-content">
+                        <a href="https://youtu.be/BDFtkjDQ7Hc" target="_blank">
+                            <img 
+                                src="Lab05_Ex2.1.png"
+                                alt="Thumbnail video về công nghệ số trong học tập"
+                            >
+                        </a>
+                        <div class="product-description">
+                            <p>Video minh họa chi tiết về cách công nghệ số thay đổi cách chúng ta học tập 
+                            và phát triển kỹ năng trong thế giới hiện đại.</p>
+                        </div>
+                        <a href="https://youtu.be/BDFtkjDQ7Hc" target="_blank" class="product-btn">
+                            ▶️ Xem Video YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 | Giới Thiệu Cá Nhân & Sản Phẩm | Phát triển với ❤️</p>
+        </footer>
+    </div>
 </body>
 </html>
